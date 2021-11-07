@@ -6,13 +6,13 @@
 
 引用数据类型：Object，又分为：Array / RegExp / Date / Math / Function
 
-<img src="C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210429001633669.png" alt="image-20210429001633669" style="zoom:50%;" />
+<img src="JavaScript-interview.assets/image-20211107150144626.png" alt="image-20211107150144626" style="zoom:67%;" />
 
 ---
 
 # 判断数据类型的方法（typeof & instanceof ）？
 
-## typeof 
+## typeof
 
 *检测数据类型*，返回一个小写字母的类型字符串。
 
@@ -20,11 +20,7 @@
 
 复杂数据类型：Array，Function，Object
 
-
-
-![image-20210428190601113](C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210428190601113.png)
-
-
+![image-20211107150251842](JavaScript-interview.assets/image-20211107150251842.png)
 
 
 
@@ -126,13 +122,13 @@ Object.prototype.toString.call([])       //"[object Array]"
 
 不等于。  JavaScript 采用IEEE 754  标准规定数字，采用64位双精度存储浮点值，计算机计算的时候会先转化为二级制数再进行计算  ，0.1 和 0.2 转换为二进制数时是无限循环的。采用IEEE 754  标准的语言，如C，Java，Python等，都有这个问题
 
-<img src="C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210428183400533.png" alt="image-20210428183400533" style="zoom:50%;" />
+<img src="JavaScript-interview.assets/image-20210428183400533.png" alt="image-20210428183400533" style="zoom:50%;" />
 
-## <img src="C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210428184921815.png" alt="image-20210428184921815" style="zoom:50%;" />
+## <img src="JavaScript-interview.assets/image-20210428184921815.png" alt="image-20210428184921815" style="zoom:50%;" />
 
 可以使用 toFixed() 截取得到字符串结果，再用 parseInt / parseFloat 进行转换：
 
-<img src="C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210428185439336.png" alt="image-20210428185439336" style="zoom:50%;" />
+<img src="JavaScript-interview.assets/image-20210428185439336.png" alt="image-20210428185439336" style="zoom:50%;" />
 
 ---
 
@@ -152,7 +148,7 @@ Object.prototype.toString.call([])       //"[object Array]"
 
 - `Object.assign()`: 
 
-  <img src="C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210429005747549.png" alt="image-20210429005747549" style="zoom:80%;" />
+  <img src="JavaScript-interview.assets/image-20210429005747549.png" alt="image-20210429005747549" style="zoom:80%;" />
 
 - `...` 扩展运算符方式:
 
@@ -376,7 +372,7 @@ const shallowClone = target => {
 
 ## ES6 的 extends 关键字实现逻辑
 
-<img src="C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210429022346388.png" alt="image-20210429022346388" style="zoom:80%;" />
+<img src="JavaScript-interview.assets/image-20210429022346388.png" alt="image-20210429022346388" style="zoom:80%;" />
 
 ---
 
@@ -755,7 +751,7 @@ fun1 函数的作用域指向全局作用域（window）和它自己本身；fun
 
 ### 常见面试题
 
-![image-20210503160229950](C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210503160229950.png)
+![image-20210503160229950](JavaScript-interview.assets/image-20210503160229950.png)
 
 **为什么会输出5个6而不是输出1,2,3,4,5？**
 
@@ -833,7 +829,7 @@ console.log(r); // { p: 10 }
 - 可选的 replacer 函数
 - 控制结果字符串里的间距
 
-<img src="C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210505003134648.png" alt="image-20210505003134648" style="zoom:80%;" />
+<img src="JavaScript-interview.assets/image-20210505003134648.png" alt="image-20210505003134648" style="zoom:80%;" />
 
 ```javascript
 function jsonStringify(data) {
@@ -985,7 +981,7 @@ console.log(Object.prototype.toString.apply(a) === '[object Array]');
 
 ## 方法总览
 
-<img src="C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210505101106496.png" alt="image-20210505101106496" style="zoom:80%;" />
+<img src="JavaScript-interview.assets/image-20210505101106496.png" alt="image-20210505101106496" style="zoom:80%;" />
 
 ### 迭代器方法
 
@@ -1504,13 +1500,13 @@ web 提供的API，根据从调用栈收到的命令，API 开始自己的单线
 
 `Javascript`单线程任务被分为**同步任务**和**异步任务**，同步任务会在调用栈中按照顺序等待主线程依次执行，异步任务会在异步任务有了结果后，将注册的回调函数放入任务队列中等待主线程空闲的时候（调用栈被清空），被读取到栈内等待主线程的执行
 
-<img src="C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210505203001589.png" alt="image-20210505203001589" style="zoom:80%;" />
+<img src="JavaScript-interview.assets/image-20210505203001589.png" alt="image-20210505203001589" style="zoom:80%;" />
 
 ### 
 
 **JavaScript 语言本身是单线程的，而浏览器 API 充当单独的线程**。事件循环（Eventloop）促进了这一过程，它会不断检查调用堆栈是否为空。如果为空，则从事件队列中添加新的函数进入调用栈（call stack）；如果不为空，则处理当前函数的调用。
 
-<img src="C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210505203655241.png" alt="image-20210505203655241" style="zoom:70%;" />
+<img src="JavaScript-interview.assets/image-20210505203655241.png" alt="image-20210505203655241" style="zoom:70%;" />
 
 简单来说 Eventloop 通过内部两个队列来实现 Event Queue 放进来的异步任务。以 setTimeout 为代表的任务被称为宏任务，放到宏任务队列（macrotask queue）中；而以 Promise 为代表的任务被称为微任务，放到微任务队列（microtask queue）中
 
@@ -1550,7 +1546,7 @@ console.log(4);
 
 当 Node.js 开始启动时，会初始化一个 Eventloop，处理输入的代码脚本，这些脚本会进行 API 异步调用，process.nextTick() 方法会开始处理事件循环。
 
-<img src="C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210505205015188.png" alt="image-20210505205015188" style="zoom:67%;" />
+<img src="JavaScript-interview.assets/image-20210505205015188.png" alt="image-20210505205015188" style="zoom:67%;" />
 
 - timers：执行setTimeout 和setInterval
 
@@ -1560,7 +1556,7 @@ console.log(4);
 
 - poll：重要且复杂的阶段，几乎所有 I/O 相关的回调都在该阶段执行（除setTimeout、setInterval、setImmediate 以及一些因为 exception 意外关闭产生的回调）：
 
-  <img src="C:\Users\ajiai\AppData\Roaming\Typora\typora-user-images\image-20210505205505280.png" alt="image-20210505205505280" style="zoom:67%;" />
+  <img src="JavaScript-interview.assets/image-20210505205505280.png" alt="image-20210505205505280" style="zoom:67%;" />
 
 - check：执行setImmediate() 设定的callbacks
 

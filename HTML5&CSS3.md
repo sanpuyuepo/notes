@@ -531,7 +531,7 @@ box-sizing: border-box; /* IE盒模型 */
 
 ## 居中布局
 
-<img src="C:/Users/ajiai/Desktop/code.png" style="zoom: 33%;" />
+<img src="HTML5&CSS3.assets/code-16362690161061.png" style="zoom: 33%;" />
 
 ### 水平居中
 
