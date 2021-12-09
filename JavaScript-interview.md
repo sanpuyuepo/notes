@@ -257,7 +257,7 @@ const shallowClone = target => {
   4.无法拷贝对象的原型链；
   5.拷贝 RegExp 引用类型会变成空对象；
   6.对象中含有 NaN、Infinity 以及 -Infinity，JSON 序列化的结果会变成 null；
-  7.无法拷贝对象的循环应用，即对象成环 (obj[key] = obj)。
+  7.无法拷贝对象的循环引用，即对象成环 (obj[key] = obj)。
   */
   ```
 
